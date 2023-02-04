@@ -1,0 +1,55 @@
+.nav {
+    display: flex;
+    flex-direction: column;
+
+  .title {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(1em, 1em + 1vw, 1.5em);
+    text-align: center;
+    margin-top: 5%;
+
+    &:hover {
+      animation: pulsar-text 1s infinite;
+    }
+  }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+    font-family: "Comfortaa", cursive;
+    font-weight: 700;
+    font-size: clamp(1em, 1em + 1vw, 1.3em);
+    margin-top: 8vh;
+
+    p {
+      width: 14vw;
+      padding: 5%;
+      margin: 2%;
+      border-radius: 10px;
+      display: flex;
+      justify-items: center;
+      
+      span{
+        margin-right: 2vw;
+      }
+      
+      &:hover {
+        cursor: pointer;
+        background-color: #7b2c7b4f;
+      }
+    }
+  }
+}
+
+@keyframes pulsar-text {
+  100% {
+    text-shadow: 0 0 4px black, 0 0 11px black, 0 0 19px black, 0 0 40px black,
+      0 0 80px rgb(204, 204, 204), 0 0 90px rgb(204, 204, 204),
+      0 0 100px rgb(204, 204, 204), 0 0 150px rgb(204, 204, 204);
+  }
+  0% {
+    text-shadow: 0 0 4px black, 0 0 10px black, 0 0 18px black, 0 0 38px black,
+      0 0 73px rgb(204, 204, 204), 0 0 80px rgb(204, 204, 204),
+      0 0 94px rgb(204, 204, 204), 0 0 140px rgb(204, 204, 204);
+  }
+}

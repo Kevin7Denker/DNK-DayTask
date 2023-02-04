@@ -1,0 +1,15 @@
+.about{
+    display: flex;
+
+    .nav{
+        flex: 1;
+        max-width: 17vw;
+        min-height: 100vh;
+        border-right: 1px solid #ff46ff;
+        box-shadow: 0 0 10px #7b2c7b;;
+    }
+
+    .container{
+        flex: 3;
+    }
+}
