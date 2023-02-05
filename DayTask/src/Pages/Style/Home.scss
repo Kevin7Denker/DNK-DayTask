@@ -8,6 +8,15 @@
 
     .container{
         flex: 3;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        display: flex;
+        font-size: 10vw;
+        font-family: 'Montserrat', sans-serif;
+        .sub{
+            font-size: 2vw;
+        }
     }
 
     @media  screen and (max-width: 600) and (max-height) {

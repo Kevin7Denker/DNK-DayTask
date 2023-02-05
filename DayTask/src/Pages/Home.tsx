@@ -7,7 +7,10 @@ const Home = () => {
         <div className="home">
             <div className="nav"><Nav /></div>
             <div className="container">
-                Seja Bem Vindo
+                Hello World!
+                <div className="sub">
+                    my first program using Electron :)
+                </div>
             </div>
         </div>
     )

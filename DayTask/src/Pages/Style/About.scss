@@ -1,13 +1,97 @@
-.about{
+.about {
+  display: flex;
+
+  .nav {
+    flex: 1;
+    max-width: 17vw;
+    min-height: 100vh;
+  }
+
+  .container {
+    flex: 3;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
-    .nav{
-        flex: 1;
-        max-width: 17vw;
-        min-height: 100vh;
+    .title {
+      font-size: 3rem;
+      font-family: "Comfortaa", serif;
+      font-weight: 600;
+      opacity: 30%;
+      margin: 2%;
     }
 
-    .container{
-        flex: 3;
+    .card {
+      display: flex;
+      flex-direction: column;
+      border: 2px solid #ff46ff;
+      border-radius: 1vw;
+      box-shadow: 0 0 20px #ff46ff;
+      overflow: hidden;
+
+      .container {
+        display: flex;
+        flex-direction: row;
+        
+        img {
+            width: 20vw;
+            
+            &:hover{
+                backdrop-filter: blur(10px);
+                transition: 0.4s ease-in-out;
+            }
+        }
+        
+        .text {
+            display: flex;
+            flex-direction: column;
+            margin: 1vw;
+            max-width: 25vw;
+
+          .mainText {
+            font-size: 1.5rem;
+            margin-bottom: 3vh;
+            margin-left: 1vw;
+            margin-right: 1vw;
+            font-family: 'Poppins', sans-serif;
+
+            
+          }
+
+          .subText {
+            font-size: 1.2rem;
+            margin: 1vw;
+            font-family: 'Roboto', sans-serif;
+          }
+
+          .button {
+            margin-top: 6vh;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+
+            a{
+                margin: 1vw;
+                font-size: 1vw;
+                font-family: 'Comfortaa';
+                border: 2px solid #dd12e099;
+                padding: 1vh;
+                border-radius: 100px;
+                box-shadow: 0 0 10px #ff46ff;
+
+                &:hover {
+                    background-color: #ff0fff;
+                    color: #590059;
+                    transition: 0.3s ease-in-out;
+                    box-shadow: 0 0 0 4px #7b2c7b;
+                }
+            }
+          }
+        }
+        
+      }
     }
+    
+  }
 }
