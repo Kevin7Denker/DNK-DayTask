@@ -36,8 +36,12 @@
     "node": "^14.18.0 || >=16.0.0"
   },
   "dependencies": {
+    "electrion": "^0.0.1-security",
+    "electron-ga-uuid": "^1.0.3",
+    "phosphor-react": "^1.4.1",
     "react-router-dom": "^6.8.0",
     "styled-components": "^5.3.6",
+    "uuid": "^9.0.0",
     "vite-tsconfig-paths": "^4.0.5"
   }
 }

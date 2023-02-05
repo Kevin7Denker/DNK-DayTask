@@ -1,15 +1,118 @@
-.tasks{
+.tasks {
+  display: flex;
+
+  .nav {
+    flex: 1;
+    position: relative;
+    max-width: 17vw;
+    min-height: 100vh;
+  }
+
+  .container {
+    flex: 3;
     display: flex;
+    justify-content: center;
 
-    .nav{
-        flex: 1;
-        max-width: 17vw;
-        min-height: 100vh;
-        border-right: 1px solid #ff46ff;
-        box-shadow: 0 0 10px #7b2c7b;;
+    .conteudo {
+      position: fixed;
+      top: 25%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      .inputs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        margin: 10%;
+
+        .nome {
+          margin: 5%;
+          font-family: "Comfortaa", monospace;
+          font-weight: 700;
+
+          input {
+            margin-top: 5%;
+            padding: 3%;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #ff46ff;
+
+            &:focus,
+            &:hover {
+              transform: scale(1.1);
+              transition: 0.3s ease-in-out;
+            }
+          }
+        }
+
+        .descricao {
+          margin: 5%;
+          font-family: "Comfortaa", monospace;
+          font-weight: 700;
+
+          input {
+            margin-top: 5%;
+            padding: 3%;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #ff46ff;
+
+            &:focus,
+            &:hover {
+              transform: scale(1.1);
+              transition: 0.3s ease-in-out;
+            }
+          }
+        }
+      }
+
+      button {
+        margin: 10%;
+        padding: 4%;
+        
+            margin: 2vw;
+            padding: 1vw;
+            border-radius: 100px;
+            background-color: transparent;
+            border: 1px solid #ff46ff;
+            box-shadow:  0 0 10px #7b2c7b;
+            color: rgb(244, 151, 234);
+            font-family: "Comfortaa", cursive;
+            font-weight: 800;
+
+            &:hover{
+                background-color: #ff0fff;
+                color: #590059;
+                transition: 0.3s ease-in-out;
+                box-shadow:  0 0 0 4px #7b2c7b;
+            }
+        }
+    }
+  }
+
+  .lista {
+    flex: 2;
+    border-left: 1px solid #ff46ff;
+    box-shadow: 0 0 20px #7b2c7b;
+    max-width: 30vw;
+
+    .title{
+        display: flex;
+        justify-content: center;
+        margin-top: 5%;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 2rem;
     }
 
-    .container{
-        flex: 3;
+    .items {
+      margin-top: 5%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-items: center;
     }
+  }
 }

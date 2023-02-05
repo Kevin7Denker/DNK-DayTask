@@ -1,25 +1,28 @@
 .nav {
     display: flex;
     flex-direction: column;
+    border-right: 1px solid #ff46ff;
+    box-shadow: 0 0 10px #7b2c7b;
+   
 
   .title {
     font-family: "Montserrat", sans-serif;
     font-size: clamp(1em, 1em + 1vw, 1.5em);
     text-align: center;
-    margin-top: 5%;
-
-    &:hover {
-      animation: pulsar-text 1s infinite;
-    }
+    top: 2%;
+    left: 1%;
+    position: fixed;
   }
 
   .options {
+    position: fixed;
     display: flex;
     flex-direction: column;
     font-family: "Comfortaa", cursive;
     font-weight: 700;
     font-size: clamp(1em, 1em + 1vw, 1.3em);
-    margin-top: 8vh;
+    top: 12%;
+    left: 0.5%;
 
     p {
       width: 14vw;
@@ -40,6 +43,57 @@
     }
   }
 }
+
+.Tarefa {
+  width: 500px;
+  height: 50px;
+  display: flex;
+  margin: 2%;
+}
+
+.Tarefa .content {
+  flex: 100%;
+  height: 100%;
+  max-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Tarefa .content span {
+  display: grid;
+  place-items: center;
+  border: none;
+  border: 1px solid #7b2c7b;
+  box-shadow: 0 0 5px #ff46ff;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  border-right: none;
+  background-color: transparent;
+}
+
+.Tarefa button {
+  flex: 20%;
+  height: 100%;
+  border: none;
+  background-color: #7b2c7b;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  cursor: pointer;
+
+  &:hover{
+    transform: scale(1.1);
+    transition: 0.2s ease-in-out;
+    border: 2px solid #ff46ff;
+    background-color: #ff46ff;
+
+    span{
+      color: white;
+    }
+  }
+}
+
 
 @keyframes pulsar-text {
   100% {

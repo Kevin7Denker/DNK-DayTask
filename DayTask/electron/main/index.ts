@@ -1,4 +1,4 @@
-import { app, BrowserWindow, shell, ipcMain } from 'electron'
+import { app, BrowserWindow, shell, ipcMain, nativeTheme } from 'electron'
 import { release } from 'node:os'
 import { join } from 'node:path'
 
@@ -43,7 +43,7 @@ const indexHtml = join(process.env.DIST, 'index.html')
 async function createWindow() {
   win = new BrowserWindow({
     title: 'Main window',
-    icon: join(process.env.PUBLIC, 'favicon.ico'),
+    //icon: join(process.env.PUBLIC, 'favicon.ico'), -> icon do software
     webPreferences: {
       preload,
       // Warning: Enable nodeIntegration and disable contextIsolation is not secure in production
@@ -52,17 +52,19 @@ async function createWindow() {
       nodeIntegration: true,
       contextIsolation: false,
     },
-    width: 1920,
-    height: 1080,
+    minWidth:  1920,
+    minHeight: 1080,
+    //alwaysOnTop: true, -> mantém a tela 100% do tempo em foco
     backgroundColor:'#240046', 
     titleBarStyle: 'hidden',
     titleBarOverlay: {
       color: '#240046',
       symbolColor: '#9d4edd',
       height: 40
-    }
-  })
-
+    },
+    
+  }
+  )
   if (process.env.VITE_DEV_SERVER_URL) { // electron-vite-vue#298
     win.loadURL(url)
     // Open devTool if the app is not packaged
@@ -123,3 +125,26 @@ ipcMain.handle('open-win', (_, arg) => {
     childWindow.loadFile(indexHtml, { hash: arg })
   }
 })
+
+
+
+app.setUserTasks([
+  {
+    program: process.execPath,
+    arguments: '--new-window',
+    iconPath: process.execPath,
+    iconIndex: 0,
+    title: 'Day Task',
+    description: 'Crie uma nova janela'
+  },
+  {
+    program: process.execPath,
+    arguments: '--new-private-window',
+    iconPath: process.execPath,
+    iconIndex: 0,
+    title: 'Day Task Private',
+    description: 'Crie uma nova janela privada'
+  }
+])
+
+
