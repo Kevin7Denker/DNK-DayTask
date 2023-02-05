@@ -15,10 +15,13 @@
 
     .conteudo {
       position: fixed;
-      top: 25%;
+      top: 40%;
       display: flex;
       align-items: center;
       justify-content: center;
+      border:1px  solid #ff46ff;
+      box-shadow: 0 0 100px #d82ad8;
+      border-radius: 10px;
 
       .inputs {
         display: flex;
@@ -99,7 +102,7 @@
   .lista {
     flex: 2;
     border-left: 1px solid #ff46ff;
-    box-shadow: 0 0 20px #7b2c7b;
+    box-shadow: 0 0 35px #7b2c7b;
     max-width: 30vw;
 
     .title {
